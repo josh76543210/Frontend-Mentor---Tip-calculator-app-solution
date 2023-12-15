@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+
+    <!-- JS Module -->
+    <script defer type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <!-- Main -->
+    <main class="main flex-center">
+      <h1 aria-label="Tip Calculator"></h1>
+      <img src="./img/logo.svg" alt="SPLITTER logo" class="title-logo" />
+      <div class="card">
+        <form class="card__form">
+          <div class="form-control">
+            <label for="bill">Bill</label>
+            <input type="number" name="bill" id="bill" />
+          </div>
+          <div class="form-control">
+            <label>Select Tip %</label>
+            <input type="radio" name="tip" id="tip5" />
+            <input type="radio" name="tip" id="tip10" />
+            <input type="radio" name="tip" id="tip15" />
+            <input type="radio" name="tip" id="tip25" />
+            <input type="radio" name="tip" id="tip50" />
+            <input type="number" name="tipcustom" id="tipcustom" />
+          </div>
+          <div class="form-control">
+            <label for="people">Number of People</label>
+            <input type="number" name="people" id="people" />
+            <p>Can't be zero</p>
+          </div>
+        </form>
+        <div class="card__display">
+          <div class="tip-amount-container">
+            <p>Tip Amount <span>/ person</span></p>
+            <p id="tip-amount">$4.27</p>
+          </div>
+          <div class="total-container">
+            <p>Total <span>/ person</span></p>
+            <p id="total">$4.27</p>
+          </div>
+          <button type="reset">RESET</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer flex-center">
+      <span class="attribution"
+        >Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >
+      </span>
+      <span class="boxv">&boxv;</span>
+      <span class="attribution"
+        >Coded by
+        <a
+          href="https://www.frontendmentor.io/profile/josh76543210"
+          target="_blank"
+          >josh76543210</a
+        >
+      </span>
+    </footer>
+  </body>
+</html>

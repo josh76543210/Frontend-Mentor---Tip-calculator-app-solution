@@ -1,0 +1,51 @@
+/**********************/
+/*     over 368px     */
+/**********************/
+@media (min-width: 23em) {
+  /* Main */
+  main {
+    min-height: calc(100vh - calc((70 / 16) * 1rem));
+  }
+
+  /* Footer */
+  footer {
+    height: calc((70 / 16) * 1rem);
+
+    flex-direction: row;
+    gap: calc((10 / 16) * 1rem);
+  }
+
+  .boxv {
+    display: inline;
+  }
+}
+
+/**********************/
+/*     over 480px     */
+/**********************/
+@media only screen and (min-width: 30em) {
+}
+
+/**********************/
+/*     over 600px     */
+/**********************/
+@media only screen and (min-width: 37.5em) {
+}
+
+/**********************/
+/*     over 800px     */
+/**********************/
+@media only screen and (min-width: 50em) {
+}
+
+/***********************/
+/*     over 992px     */
+/***********************/
+@media only screen and (min-width: 62em) {
+}
+
+/***********************/
+/*     over 1120px     */
+/***********************/
+@media only screen and (min-width: 70em) {
+}

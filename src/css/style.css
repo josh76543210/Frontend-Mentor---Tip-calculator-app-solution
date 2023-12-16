@@ -39,6 +39,8 @@
   --light-grayish-cyan: hsl(185, 41%, 84%);
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  /* OTHER */
+  --error: hsl(0, 56%, 67%);
 }
 
 /* General Styling */
@@ -77,8 +79,10 @@ main {
 
 /* card */
 .card {
+  width: 100%;
+  max-width: calc((500 / 16) * 1rem);
   background-color: var(--white);
-  padding: calc((30 / 16) * 1rem);
+  padding: calc((30 / 16) * 1rem) calc((10 / 16) * 1rem);
   border-radius: calc((20 / 16) * 1rem);
 
   display: flex;
@@ -88,6 +92,8 @@ main {
 
 /* form */
 .card__form {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: calc((40 / 16) * 1rem);
@@ -219,14 +225,14 @@ input[type="number"] {
 .errormessage {
   padding: calc((5 / 16) * 1rem) 0;
   text-align: right;
-  color: red;
+  color: var(--error);
   font-size: calc((16 / 16) * 1rem);
 
   display: none;
 }
 
 [aria-invalid="true"] {
-  outline: 2px solid red;
+  outline: 2px solid var(--error);
 }
 
 [aria-invalid="true"] ~ .errormessage {

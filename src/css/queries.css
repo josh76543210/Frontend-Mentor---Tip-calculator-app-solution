@@ -1,5 +1,27 @@
 /**********************/
+/*     over 352px     */
+/**********************/
+@media only screen and (min-width: 22em) {
+  .card {
+    padding: calc((30 / 16) * 1rem);
+  }
+}
+
+/**********************/
+/*     over 384px     */
+/**********************/
+@media only screen and (min-width: 24em) {
+  /* form */
+  .errormessage {
+    position: absolute;
+    top: calc((-5 / 16) * 1rem);
+    right: 0;
+  }
+}
+
+/**********************/
 /*     over 448px     */
+/*    FOOTER QUERY    */
 /**********************/
 @media (min-width: 28em) {
   /* Main */
@@ -48,4 +70,43 @@
 /*     over 1120px     */
 /***********************/
 @media only screen and (min-width: 70em) {
+  /* Main */
+  /* card */
+  .card {
+    max-width: calc((1000 / 16) * 1rem);
+
+    flex-direction: row;
+    gap: calc((50 / 16) * 1rem);
+  }
+
+  /* form */
+  .card__form {
+    gap: calc((60 / 16) * 1rem);
+  }
+
+  .radio-control {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* display */
+  .card__display {
+    padding: calc((40 / 16) * 1rem);
+    padding-top: calc((50 / 16) * 1rem);
+
+    flex-basis: calc((450 / 16) * 1rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    gap: calc((50 / 16) * 1rem);
+  }
+
+  #tip-amount,
+  #total {
+    font-size: calc((36 / 16) * 1rem);
+  }
+
+  button[type="reset"] {
+    padding: calc((12 / 16) * 1rem);
+    margin-top: auto;
+  }
 }

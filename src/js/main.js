@@ -72,6 +72,33 @@ resetBtn.addEventListener("click", function () {
   getAmounts();
 });
 
+// If key is pressed
+document.addEventListener("keydown", function (e) {
+  // if the enter key is pressed
+  if (e.code === "Enter") {
+    // get element that is focused
+    const focusedElement = document.activeElement;
+    // if focus is on a tip label element
+    if (focusedElement.classList.contains("tip-label")) {
+      // get the related radio input element
+      const tipInput = focusedElement.previousElementSibling;
+      // check that element
+      tipInput.checked = true;
+
+      // update tipAmount
+      const newTipValue = Number(tipInput.value);
+      if (isNaN(newTipValue)) {
+        tipAmount = 0;
+      } else {
+        tipAmount = newTipValue;
+      }
+
+      // update display
+      getAmounts();
+    }
+  }
+});
+
 ////////////////////
 // Functions
 function getAmounts() {

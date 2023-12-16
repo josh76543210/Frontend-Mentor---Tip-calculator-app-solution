@@ -57,15 +57,16 @@ tipEl.addEventListener("click", function (e) {
 
 // If reset button is pressed
 resetBtn.addEventListener("click", function () {
-  console.log("RESET");
+  console.log("----- RESET ------");
 
   // clear inputs
   billIn.value = "";
   peopleIn.value = "";
   customTipIn.value = "";
 
-  // reset tip
-  tipAmount = 0;
+  // reset tip if it is a custom value
+  if (document.querySelector("input[name='tip']:checked").value === "custom")
+    tipAmount = 0;
 
   // update display
   getAmounts();

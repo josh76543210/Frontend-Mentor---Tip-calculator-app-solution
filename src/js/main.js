@@ -57,8 +57,6 @@ tipEl.addEventListener("click", function (e) {
 
 // If reset button is pressed
 resetBtn.addEventListener("click", function () {
-  console.log("----- RESET ------");
-
   // clear inputs
   billIn.value = "";
   peopleIn.value = "";
@@ -70,6 +68,9 @@ resetBtn.addEventListener("click", function () {
 
   // update display
   getAmounts();
+
+  // focus on bill input
+  billIn.focus();
 });
 
 // If key is pressed
@@ -141,11 +142,6 @@ function getAmounts() {
   // show error message if people are 0
   if (peopleAmount === 0) peopleIn.ariaInvalid = true;
   else peopleIn.ariaInvalid = false;
-
-  console.log("------ INPUT EVENT ------");
-  console.log("Bill: ", billAmount);
-  console.log("Tip: ", tipAmount);
-  console.log("People: ", peopleAmount);
 
   calcAmounts(billAmount, tipAmount, peopleAmount, tipOut, totalOut);
 }

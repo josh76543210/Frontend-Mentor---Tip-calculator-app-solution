@@ -26,7 +26,7 @@
         <form class="card__form">
           <div class="form-control">
             <label for="bill">Bill</label>
-            <input type="number" name="bill" id="bill" />
+            <input type="number" name="bill" id="bill" aria-invalid="false" />
           </div>
           <div class="form-control">
             <p class="radio-label" id="tip-selector-label">Select Tip %</p>
@@ -38,8 +38,9 @@
                 value="5"
                 aria-labelledby="tip-selector-label"
               />
-              <label for="tip5" tabindex="0">5%</label>
+              <label class="tip-label" for="tip5" tabindex="0">5%</label>
               <input type="radio" name="tip" id="tip10" value="10" /><label
+                class="tip-label"
                 for="tip10"
                 tabindex="0"
                 >10%</label
@@ -50,13 +51,15 @@
                 id="tip15"
                 value="15"
                 checked
-              /><label for="tip15" tabindex="0">15%</label>
+              /><label class="tip-label" for="tip15" tabindex="0">15%</label>
               <input type="radio" name="tip" id="tip25" value="25" /><label
+                class="tip-label"
                 for="tip25"
                 tabindex="0"
                 >25%</label
               >
               <input type="radio" name="tip" id="tip50" value="50" /><label
+                class="tip-label"
                 for="tip50"
                 tabindex="0"
                 >50%</label
@@ -66,7 +69,9 @@
                 name="tip"
                 id="tipcustom"
                 value="custom"
-              /><label for="tipcustom" tabindex="0">Custom</label>
+              /><label class="tip-label" for="tipcustom" tabindex="0"
+                >Custom</label
+              >
               <input
                 type="number"
                 name="tipinput"
@@ -82,7 +87,7 @@
               name="people"
               id="people"
               aria-errormessage="people-error"
-              aria-invalid="true"
+              aria-invalid="false"
             />
             <p class="errormessage" id="people-error">Can't be zero</p>
           </div>
@@ -90,13 +95,13 @@
         <div class="card__display">
           <div class="tip-amount-container">
             <h2>Tip Amount <span>/ person</span></h2>
-            <p id="tip-amount">$4.27</p>
+            <p id="tip-amount">$0.00</p>
           </div>
           <div class="total-container">
             <h2>Total <span>/ person</span></h2>
-            <p id="total">$32.79</p>
+            <p id="total">$0.00</p>
           </div>
-          <button type="reset">RESET</button>
+          <button id="reset" type="reset">RESET</button>
         </div>
       </div>
     </main>

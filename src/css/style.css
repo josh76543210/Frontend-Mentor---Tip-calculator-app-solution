@@ -130,8 +130,14 @@ input[type="number"] {
   text-align: right;
 }
 
-input[type="number"]:focus {
+input[type="number"]:focus,
+.radio-control input + label:focus,
+.radio-control input#tipcustom + label:focus {
   outline: var(--strong-cyan) calc((2 / 16) * 1rem) solid;
+}
+
+.radio-control input:checked + label:focus {
+  outline: var(--strong-cyan) calc((2 / 16) * 1rem) dashed;
 }
 
 input[type="number"]#bill {
@@ -166,13 +172,18 @@ input[type="number"] {
 }
 
 #tipinput {
+  background-color: var(--strong-cyan);
   padding-left: calc((5 / 16) * 1rem);
 
   display: none;
 }
 
+#tipinput:focus {
+  background-color: var(--very-light-grayish-cyan);
+}
+
 #tipinput::placeholder {
-  color: var(--dark-grayish-cyan);
+  color: var(--very-dark-cyan);
 }
 
 .radio-control input + label {
@@ -185,8 +196,7 @@ input[type="number"] {
 }
 
 .radio-control input + label:hover,
-.radio-control input + label:focus {
-  outline: none;
+.radio-control input:checked + label:hover {
   background-color: var(--light-grayish-cyan);
   color: var(--very-dark-cyan);
 }
@@ -203,9 +213,7 @@ input[type="number"] {
   padding-right: calc((20 / 16) * 1rem);
 }
 
-.radio-control input#tipcustom + label:hover,
-.radio-control input#tipcustom + label:focus {
-  outline: none;
+.radio-control input#tipcustom + label:hover {
   background-color: var(--light-grayish-cyan);
   color: var(--very-dark-cyan);
 }
@@ -287,10 +295,12 @@ button[type="reset"] {
   border-radius: calc((5 / 16) * 1rem);
 }
 
-button[type="reset"]:hover,
-button[type="reset"]:focus {
-  outline: none;
+button[type="reset"]:hover {
   background-color: var(--light-grayish-cyan);
+}
+
+button[type="reset"]:focus {
+  outline: var(--strong-cyan) calc((2 / 16) * 1rem) dashed;
 }
 
 /* Footer */
@@ -328,5 +338,5 @@ footer {
 }
 
 .attribution a:focus {
-  outline: calc((2 / 16) * 1rem) dashed var(--very-dark-cyan);
+  outline: var(--strong-cyan) calc((2 / 16) * 1rem) solid;
 }

@@ -102,7 +102,7 @@
 
   #tip-amount,
   #total {
-    font-size: calc((36 / 16) * 1rem);
+    font-size: calc((42 / 16) * 1rem);
   }
 
   button[type="reset"] {

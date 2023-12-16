@@ -29,28 +29,72 @@
             <input type="number" name="bill" id="bill" />
           </div>
           <div class="form-control">
-            <label>Select Tip %</label>
-            <input type="radio" name="tip" id="tip5" />
-            <input type="radio" name="tip" id="tip10" />
-            <input type="radio" name="tip" id="tip15" />
-            <input type="radio" name="tip" id="tip25" />
-            <input type="radio" name="tip" id="tip50" />
-            <input type="number" name="tipcustom" id="tipcustom" />
+            <p class="radio-label" id="tip-selector-label">Select Tip %</p>
+            <div class="radio-control">
+              <input
+                type="radio"
+                name="tip"
+                id="tip5"
+                value="5"
+                aria-labelledby="tip-selector-label"
+              />
+              <label for="tip5" tabindex="0">5%</label>
+              <input type="radio" name="tip" id="tip10" value="10" /><label
+                for="tip10"
+                tabindex="0"
+                >10%</label
+              >
+              <input
+                type="radio"
+                name="tip"
+                id="tip15"
+                value="15"
+                checked
+              /><label for="tip15" tabindex="0">15%</label>
+              <input type="radio" name="tip" id="tip25" value="25" /><label
+                for="tip25"
+                tabindex="0"
+                >25%</label
+              >
+              <input type="radio" name="tip" id="tip50" value="50" /><label
+                for="tip50"
+                tabindex="0"
+                >50%</label
+              >
+              <input
+                type="radio"
+                name="tip"
+                id="tipcustom"
+                value="custom"
+              /><label for="tipcustom" tabindex="0">Custom</label>
+              <input
+                type="number"
+                name="tipinput"
+                id="tipinput"
+                placeholder="Custom"
+              />
+            </div>
           </div>
           <div class="form-control">
             <label for="people">Number of People</label>
-            <input type="number" name="people" id="people" />
-            <p>Can't be zero</p>
+            <input
+              type="number"
+              name="people"
+              id="people"
+              aria-errormessage="people-error"
+              aria-invalid="false"
+            />
+            <p class="errormessage" id="people-error">Can't be zero</p>
           </div>
         </form>
         <div class="card__display">
           <div class="tip-amount-container">
-            <p>Tip Amount <span>/ person</span></p>
+            <h2>Tip Amount <span>/ person</span></h2>
             <p id="tip-amount">$4.27</p>
           </div>
           <div class="total-container">
-            <p>Total <span>/ person</span></p>
-            <p id="total">$4.27</p>
+            <h2>Total <span>/ person</span></h2>
+            <p id="total">$32.79</p>
           </div>
           <button type="reset">RESET</button>
         </div>

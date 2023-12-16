@@ -1,7 +1,7 @@
 /**********************/
-/*     over 368px     */
+/*     over 448px     */
 /**********************/
-@media (min-width: 23em) {
+@media (min-width: 28em) {
   /* Main */
   main {
     min-height: calc(100vh - calc((70 / 16) * 1rem));

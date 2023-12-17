@@ -45,8 +45,6 @@ Users should be able to:
 
 Practice using Vite and JavaScript modules:
 
-To see how you can add code snippets, see below:
-
 ```html
 <script defer type="module" src="./js/main.js"></script>
 ```
